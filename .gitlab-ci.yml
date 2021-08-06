@@ -18,4 +18,15 @@ build:
     - docker build --cache-from $CI_REGISTRY_IMAGE:latest --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA --tag $CI_REGISTRY_IMAGE:latest .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
     - docker push $CI_REGISTRY_IMAGE:latest
-    
+
+
+
+
+
+# aws ecr get-login-password --region ap-southeast-1 | docker login --username hung_test_dev
+
+# aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin 440638714536.dkr.ecr.ap-southeast-1.amazonaws.com
+
+# aws ecr get-login-password | docker login --username AWS --password-stdin 623866230960.dkr.ecr.ap-southeast-1.amazonaws.com
+
+# aws ecr create-repository --repository-name test_ecs_ecr --region ap-southeast-1
